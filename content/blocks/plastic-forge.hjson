@@ -1,16 +1,25 @@
 {
 	"name": "Plastic Forge",
 	"description": "Creates plastic from petroleum.",
-	"type": "GenericCrafter",
-	"outputItem": {"item": "plastic", "amount": "1"},
+	"type": "Separator",
+	"results": [
+		{"item": "plastanium", "amount": 1},
+		{"item": "plastic", "amount": 2},
+		{"item": "sludge-container"   , "amount": 1}
+	],
 	"consumes": {
-		"power": 0.5,
-		"liquid": {"liquid": "petroleum", "amount": 0.05}
+		"power": 0.75,
+		"liquid": {"liquid": "petroleum", "amount": 0.5}
+		"items": {
+			"items": [
+				{"item": "aluminum", "amount": 1}
+			]
+		}
 	},
 	"requirements": [
 		{"item": "copper"   , "amount": 40},
-		{"item": "lead"     , "amount": 30},
-		{"item": "metaglass", "amount": 25},
+		{"item": "aluminum"     , "amount": 100},
+		{"item": "metaglass", "amount": 55},
 		{"item": "graphite" , "amount": 25}
 	],
 	"size": 2,
@@ -19,7 +28,7 @@
 	"liquidCapacity": 10,
 	"hasItems": true,
 	"itemCapacity": 5,
-	"craftTime": 60,
+	"craftTime": 180,
 	"updateEffect": "smeltsmoke",
 	"category": "crafting",
 	"research": "oil-distiller",
